@@ -13,3 +13,4 @@ Example repository for Dart language, which demonstrates server, client and mobi
     pub get
     dart bin/server.dart
   ```
+2. Mock database, and define Painting model
