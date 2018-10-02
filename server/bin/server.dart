@@ -1,6 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:server/src/database.dart';
+import 'package:server/src/paintings.dart';
+
 Future main() async {
   const port = 8000;
 
@@ -11,10 +14,21 @@ Future main() async {
 
   print('Listening on ${port}');
 
-  await for (HttpRequest request in server) {
-    request.response
-      ..write('Hello, world!')
-      ..close();
-  }
+  server.where((HttpRequest req) {
+    return req.method == 'GET' && req.uri.toString() == '/api/get_paintings';
+  }).listen(onData);
 }
+
+void onData(HttpRequest event) {
+  final paintings = new Paintings.fromJson(Database.getPaintings());
+
+  final encoded = paintings.toJson();
+
+  event.response
+    ..statusCode = HttpStatus.ok
+    ..write(encoded)
+    ..close();
+}
+
+
 

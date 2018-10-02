@@ -15,4 +15,6 @@ class Painting {
 
   factory Painting.fromJson(Map<String, dynamic> json) => _$PaintingFromJson(json);
 
+  Map<String, dynamic> toJson() => _$PaintingToJson(this);
+
 }
