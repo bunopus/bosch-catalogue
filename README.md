@@ -14,3 +14,4 @@ Example repository for Dart language, which demonstrates server, client and mobi
     dart bin/server.dart
   ```
 2. Mock database, and define Painting model
+3. Added `json_serializable` - package for data serialization/deserialization. To generate model, follow the [rules](https://github.com/dart-lang/json_serializable/tree/master/example).
