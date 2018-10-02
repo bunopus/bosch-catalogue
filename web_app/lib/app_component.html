@@ -1,3 +1,18 @@
-<h1>My First AngularDart App</h1>
-
-<todo-list></todo-list>
+<nav class="navbar navbar-fixed-top">
+  <div class="content-padding">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a [routerLink]="'/'" routerLinkActive="active">Home</a></li>
+    </ul>
+  </div>
+</nav>
+<header></header>
+<main>
+  <router-outlet [routes]="routes"></router-outlet>
+</main>
+<footer>
+  <div class="content-padding">
+    <div class="footer-content">
+      <p>Copyright &copy; Bosch paintings Application</p>
+    </div>
+  </div>
+</footer>

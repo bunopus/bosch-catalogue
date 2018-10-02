@@ -7,20 +7,18 @@ part of 'painting.dart';
 // **************************************************************************
 
 Painting _$PaintingFromJson(Map<String, dynamic> json) {
-  return $checkedNew('Painting', json, () {
-    var val = Painting(
-        $checkedConvert(json, 'title', (v) => v as String),
-        $checkedConvert(
-            json, 'tags', (v) => (v as List).map((e) => e as String).toList()),
-        $checkedConvert(json, 'description', (v) => v as String),
-        $checkedConvert(json, 'preview', (v) => v as String),
-        $checkedConvert(json, 'big-preview', (v) => v as String));
-    return val;
-  }, fieldKeyMap: const {'bigPreview': 'big-preview'});
+  return Painting(
+      json['title'] as String,
+      (json['tags'] as List).map((e) => e as String).toList(),
+      json['description'] as String,
+      json['preview'] as String,
+      json['big-preview'] as String)
+    ..id = json['id'] as int;
 }
 
 Map<String, dynamic> _$PaintingToJson(Painting instance) => <String, dynamic>{
       'title': instance.title,
+      'id': instance.id,
       'tags': instance.tags,
       'description': instance.description,
       'preview': instance.preview,

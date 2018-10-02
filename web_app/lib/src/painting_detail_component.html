@@ -1,0 +1,25 @@
+<template [ngIf]="painting == null">
+	<div class="notice">Loading...</div>
+</template>
+
+<template [ngIf]="painting != null">
+	<div class="content-padding clearfix">
+		<div class="poster-wrapper">
+			<img src="{{painting['preview']}}" alt="{{painting['title']}}" class="img-responsive"/>
+		</div>
+
+		<div class="description-wrapper">
+			<div class="description">
+				<h2 class="painting-header">Description</h2>
+				<p>{{painting['description']}}</p>
+			</div>
+
+			<div class="tags">
+				<h2 class="painting-header">Tags</h2>
+				<ul>
+					<li *ngFor="let tag of tags">{{tag}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</template>

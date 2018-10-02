@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:server/src/database.dart';
@@ -26,7 +27,8 @@ void onData(HttpRequest event) {
 
   event.response
     ..statusCode = HttpStatus.ok
-    ..write(encoded)
+    ..headers.add('Access-Control-Allow-Origin', '*')
+    ..write(json.encode(encoded))
     ..close();
 }
 

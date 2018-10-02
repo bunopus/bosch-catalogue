@@ -7,16 +7,10 @@ part of 'paintings.dart';
 // **************************************************************************
 
 Paintings _$PaintingsFromJson(Map<String, dynamic> json) {
-  return $checkedNew('Paintings', json, () {
-    var val = Paintings($checkedConvert(
-        json,
-        'paintings',
-        (v) => (v as List)
-            ?.map((dynamic e) =>
-                e == null ? null : Painting.fromJson(e as Map<String, dynamic>))
-            ?.toList()));
-    return val;
-  });
+  return Paintings((json['paintings'] as List)
+      ?.map((dynamic e) =>
+          e == null ? null : Painting.fromJson(e as Map<String, dynamic>))
+      ?.toList());
 }
 
 Map<String, dynamic> _$PaintingsToJson(Paintings instance) => <String, dynamic>{

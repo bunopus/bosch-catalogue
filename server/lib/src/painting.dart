@@ -4,6 +4,7 @@ part 'painting.g.dart';
 @JsonSerializable(nullable: false)
 class Painting {
   String title;
+  int id;
   List<String> tags;
   String description;
   String preview;

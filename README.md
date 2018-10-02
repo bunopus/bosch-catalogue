@@ -18,3 +18,5 @@ Example repository for Dart language, which demonstrates server, client and mobi
 4. Combine all together. Add paintings to response, but we require additional `Paintings` class for that as a container for paintings array
        ---------------------------
 5. Let's start to creating web app. Add super simple Angular 5 application (see [README](web_app/README.md) to build and run)
+6. Add data, views and many more. NOTE: this is not production app, so expect many shitcoding ¯\_(ツ)_/¯.
+Notice `/web/lib/paintings_service.dart`, main service for data serialization/deserialization
