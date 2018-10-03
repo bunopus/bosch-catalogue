@@ -27,3 +27,5 @@ Notice `/web_app/analysis_options.yaml`. There is one important line
         - angular
     ```
     it enables analyzer support for angular html files
+8. Add mobile application. It's made with Flutter.
+Notice models reuse in [pubspec.yaml](mobile/pubspec.yaml) and in [*fetch*](/mobile/lib/main.dart#L15) function
