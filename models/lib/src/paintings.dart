@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:server/src/painting.dart';
+import 'package:models/src/painting.dart';
 part 'paintings.g.dart';
 
 @JsonSerializable()

@@ -17,7 +17,7 @@ class HeaderComponent {
       if(state.path.startsWith('/painting/')) {
         var id = state.parameters['id'];
         var item = await _service.getPainting(int.parse(id));
-        setBackground(item['big-preview']);
+        setBackground(item.bigPreview);
       }
       else {
         setBackground();

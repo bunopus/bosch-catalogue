@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:server/src/database.dart';
-import 'package:server/src/paintings.dart';
+import 'package:models/models.dart';
 
 Future main() async {
   const port = 8000;

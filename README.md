@@ -20,3 +20,10 @@ Example repository for Dart language, which demonstrates server, client and mobi
 5. Let's start to creating web app. Add super simple Angular 5 application (see [README](web_app/README.md) to build and run)
 6. Add data, views and many more. NOTE: this is not production app, so expect many shitcoding ¯\_(ツ)_/¯.
 Notice `/web/lib/paintings_service.dart`, main service for data serialization/deserialization
+7. Move all models to separate package, and include it into server and web
+Notice `/web_app/analysis_options.yaml`. There is one important line
+    ```yaml
+      plugins:
+        - angular
+    ```
+    it enables analyzer support for angular html files

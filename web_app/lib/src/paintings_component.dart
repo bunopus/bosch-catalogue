@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:angular/angular.dart';
 import 'package:angular_router/angular_router.dart';
+import 'package:models/models.dart';
 
 import '../paintings_service.dart';
 
@@ -14,12 +15,12 @@ import '../paintings_service.dart';
 class PaintingsComponent implements OnActivate {
   final PaintingsService _paintingsService;
 
-  List<Map> items;
+  Paintings items;
 
   PaintingsComponent(this._paintingsService);
 
   String getPaintingLink(item) {
-    return '/painting/${item['id']}';
+    return '/painting/${item.id}';
   }
 
   @override
